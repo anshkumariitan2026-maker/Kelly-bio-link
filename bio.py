@@ -49,9 +49,15 @@ async def start_handler(client: Client, message):
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("➕ ˹ᴀᴅᴅ ᴍє ɪη ʏσᴜʀ ɢʀσᴜᴘ˼", url=add_url)],
         [
-            InlineKeyboardButton("˹sᴜᴘᴘσʀᴛ˼", url="https://t.me/itsSmartDev"),
-            InlineKeyboardButton("🗑️ Close", callback_data="close")
-        ]
+        InlineKeyboardButton("˹sᴜᴘᴘσʀᴛ˼", url="https://t.me/itsSmartDev"),
+        InlineKeyboardButton("🗑️ ˹cℓσsє˼", callback_data="close"),
+    ],
+    [
+        InlineKeyboardButton("˹❍ᴡηєʀ˼", url="tg://openmessage?user_id=8275132868"),
+    ],
+    [
+        InlineKeyboardButton("˹ʜєʟᴘ ᴧηᴅ ᴄσᴍᴍᴧηᴅ˼", url="https://t.me/BioxCheakerbot?start=help"),
+    ]
     ])
     await client.send_message(chat_id, text, reply_markup=kb)
     
