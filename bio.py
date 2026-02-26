@@ -34,19 +34,22 @@ async def start_handler(client: Client, message):
     bot = await client.get_me()
     add_url = f"https://t.me/{bot.username}?startgroup=true"
     text = (
-        "**✨ Welcome to BioLink Protector Bot! ✨**\n\n"
-        "🛡️ I help protect your groups from users with links in their bio.\n\n"
-        "**🔹 Key Features:**\n"
-        "   • Automatic URL detection in user bios\n"
-        "   • Customizable warning limit\n"
-        "   • Auto-mute or ban when limit is reached\n"
-        "   • Whitelist management for trusted users\n\n"
-        "**Use /help to see all available commands.**"
+        "**❖ ʜᴇʏ ɪ'ᴍ ˹𝐁ɪᴏ 𝐋ɪɴᴋ ꭙ 𝐑ᴇsᴛʀɪᴄᴛᴏʀ˼**"
+"**❍ ᴀ ʙɪᴏ ʟɪɴᴋ ᴄʜᴇᴄᴋᴇʀ ʙᴏᴛ ғᴏʀ ɢʀᴏᴜᴘs.**"
+
+"**🔹 Kᴇʏ Fᴇᴀᴛᴜʀᴇs:**"
+
+"**❍ Aᴜᴛᴏᴍᴀᴛɪᴄ URL ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪɴ ᴜsᴇʀ ʙɪᴏs.**"
+"**❍ Cᴜsᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴀʀɴɪɴɢ ʟɪᴍɪᴛ.**"
+"**❍ Aᴜᴛᴏ-ᴍᴜᴛᴇ ᴏʀ ʙᴀɴ ᴡʜᴇɴ ʟɪᴍɪᴛ ɪs ʀᴇᴀᴄʜᴇᴅ.**"
+"**❍ Wʜɪᴛᴇʟɪsᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ғᴏʀ ᴛʀᴜsᴛᴇᴅ ᴜsᴇʀs.**"
+
+"**➻ ᴄʟɪᴄᴋ** /help **ᴛᴏ sᴇᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs.**"
     )
     kb = InlineKeyboardMarkup([
-        [InlineKeyboardButton("➕ Add Me to Your Group", url=add_url)],
+        [InlineKeyboardButton("➕ ˹ᴀᴅᴅ ᴍє ɪη ʏσᴜʀ ɢʀσᴜᴘ˼", url=add_url)],
         [
-            InlineKeyboardButton("🛠️ Support", url="https://t.me/itsSmartDev"),
+            InlineKeyboardButton("˹sᴜᴘᴘσʀᴛ˼", url="https://t.me/itsSmartDev"),
             InlineKeyboardButton("🗑️ Close", callback_data="close")
         ]
     ])
@@ -56,16 +59,19 @@ async def start_handler(client: Client, message):
 async def help_handler(client: Client, message):
     chat_id = message.chat.id
     help_text = (
-        "**🛠️ Bot Commands & Usage**\n\n"
-        "`/config` – set warn-limit & punishment mode\n"
-        "`/free` – whitelist a user (reply or user/id)\n"
-        "`/unfree` – remove from whitelist\n"
-        "`/freelist` – list all whitelisted users\n\n"
-        "**When someone with a URL in their bio posts, I’ll:**\n"
-        " 1. ⚠️ Warn them\n"
-        " 2. 🔇 Mute if they exceed limit\n"
-        " 3. 🔨 Ban if set to ban\n\n"
-        "**Use the inline buttons on warnings to cancel or whitelist**"
+        "**🤖 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 & 𝐔𝐒𝐄𝐒.**"
+
+"¤ /config – **sᴇᴛ ᴡᴀʀɴ-ʟɪᴍɪᴛ & ᴘᴜɴɪsʜᴍᴇɴᴛ ᴍᴏᴅᴇ**"
+"¤ /free – **ᴡʜɪᴛᴇʟɪsᴛ ᴀ ᴜsᴇʀ (ʀᴇᴘʟʏ ᴏʀ ᴜsᴇʀ/ɪᴅ)**"
+"¤ /unfree – **ʀᴇᴍᴏᴠᴇ ғʀᴏᴍ ᴡʜɪᴛᴇʟɪsᴛ**"
+"¤ /freelist – **ʟɪsᴛ ᴀʟʟ ᴡʜɪᴛᴇʟɪsᴛᴇᴅ ᴜsᴇʀs**"
+
+"**❍ Wʜᴇɴ sᴏᴍᴇᴏɴᴇ ᴡɪᴛʜ ᴀ URL ɪɴ ᴛʜᴇɪʀ ʙɪᴏ ᴘᴏsᴛs, I’ʟʟ:**"
+"1. ⚠️ Wᴀʀɴ ᴛʜᴇᴍ"
+"2. 🔇 Mᴜᴛᴇ ɪғ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ʟɪᴍɪᴛ"
+"3. 🚫 Bᴀɴ ɪғ sᴇᴛ ᴛᴏ ʙᴀɴ"
+
+"**❍ Usᴇ ᴛʜᴇ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs ᴏɴ ᴡᴀʀɴɪɴɢs ᴛᴏ ᴄᴀɴᴄᴇʟ ᴏʀ ᴡʜɪᴛᴇʟɪsᴛ.**"
     )
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("🗑️ Close", callback_data="close")]
