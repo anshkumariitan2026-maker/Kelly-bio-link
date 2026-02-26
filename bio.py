@@ -33,19 +33,20 @@ async def start_handler(client: Client, message):
     chat_id = message.chat.id
     bot = await client.get_me()
     add_url = f"https://t.me/{bot.username}?startgroup=true"
-    text = (
-        "**❖ ʜᴇʏ ɪ'ᴍ ˹𝐁ɪᴏ 𝐋ɪɴᴋ ꭙ 𝐑ᴇsᴛʀɪᴄᴛᴏʀ˼**"
-"**❍ ᴀ ʙɪᴏ ʟɪɴᴋ ᴄʜᴇᴄᴋᴇʀ ʙᴏᴛ ғᴏʀ ɢʀᴏᴜᴘs.**"
+    text = """
+    **❖ ʜᴇʏ ɪ'ᴍ ˹𝐁ɪᴏ 𝐋ɪɴᴋ ꭙ 𝐑ᴇsᴛʀɪᴄᴛᴏʀ˼**
+**❍ ᴀ ʙɪᴏ ʟɪɴᴋ ᴄʜᴇᴄᴋᴇʀ ʙᴏᴛ ғᴏʀ ɢʀᴏᴜᴘs.**
 
-"**🔹 Kᴇʏ Fᴇᴀᴛᴜʀᴇs:**"
+**🔹 Kᴇʏ Fᴇᴀᴛᴜʀᴇs:**
 
-"**❍ Aᴜᴛᴏᴍᴀᴛɪᴄ URL ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪɴ ᴜsᴇʀ ʙɪᴏs.**"
-"**❍ Cᴜsᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴀʀɴɪɴɢ ʟɪᴍɪᴛ.**"
-"**❍ Aᴜᴛᴏ-ᴍᴜᴛᴇ ᴏʀ ʙᴀɴ ᴡʜᴇɴ ʟɪᴍɪᴛ ɪs ʀᴇᴀᴄʜᴇᴅ.**"
-"**❍ Wʜɪᴛᴇʟɪsᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ғᴏʀ ᴛʀᴜsᴛᴇᴅ ᴜsᴇʀs.**"
+**❍ Aᴜᴛᴏᴍᴀᴛɪᴄ URL ᴅᴇᴛᴇᴄᴛɪᴏɴ ɪɴ ᴜsᴇʀ ʙɪᴏs.**
+**❍ Cᴜsᴛᴏᴍɪᴢᴀʙʟᴇ ᴡᴀʀɴɪɴɢ ʟɪᴍɪᴛ.**
+**❍ Aᴜᴛᴏ-ᴍᴜᴛᴇ ᴏʀ ʙᴀɴ ᴡʜᴇɴ ʟɪᴍɪᴛ ɪs ʀᴇᴀᴄʜᴇᴅ.**
+**❍ Wʜɪᴛᴇʟɪsᴛ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ғᴏʀ ᴛʀᴜsᴛᴇᴅ ᴜsᴇʀs.**
 
-"**➻ ᴄʟɪᴄᴋ** /help **ᴛᴏ sᴇᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs.**"
-    )
+**➻ ᴄʟɪᴄᴋ** /help **ᴛᴏ sᴇᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs.**
+"""
+    
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("➕ ˹ᴀᴅᴅ ᴍє ɪη ʏσᴜʀ ɢʀσᴜᴘ˼", url=add_url)],
         [
@@ -63,21 +64,21 @@ async def start_handler(client: Client, message):
 @app.on_message(filters.command("help"))
 async def help_handler(client: Client, message):
     chat_id = message.chat.id
-    help_text = (
-        "**🤖 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 & 𝐔𝐒𝐄𝐒.**"
+    help_text = """
+    **🤖 𝐁𝐎𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 & 𝐔𝐒𝐄𝐒.**
 
-"¤ /config – **sᴇᴛ ᴡᴀʀɴ-ʟɪᴍɪᴛ & ᴘᴜɴɪsʜᴍᴇɴᴛ ᴍᴏᴅᴇ**"
-"¤ /free – **ᴡʜɪᴛᴇʟɪsᴛ ᴀ ᴜsᴇʀ (ʀᴇᴘʟʏ ᴏʀ ᴜsᴇʀ/ɪᴅ)**"
-"¤ /unfree – **ʀᴇᴍᴏᴠᴇ ғʀᴏᴍ ᴡʜɪᴛᴇʟɪsᴛ**"
-"¤ /freelist – **ʟɪsᴛ ᴀʟʟ ᴡʜɪᴛᴇʟɪsᴛᴇᴅ ᴜsᴇʀs**"
+¤ /config – **sᴇᴛ ᴡᴀʀɴ-ʟɪᴍɪᴛ & ᴘᴜɴɪsʜᴍᴇɴᴛ ᴍᴏᴅᴇ**
+¤ /free – **ᴡʜɪᴛᴇʟɪsᴛ ᴀ ᴜsᴇʀ (ʀᴇᴘʟʏ ᴏʀ ᴜsᴇʀ/ɪᴅ)**
+¤ /unfree – **ʀᴇᴍᴏᴠᴇ ғʀᴏᴍ ᴡʜɪᴛᴇʟɪsᴛ**
+¤ /freelist – **ʟɪsᴛ ᴀʟʟ ᴡʜɪᴛᴇʟɪsᴛᴇᴅ ᴜsᴇʀs**
 
-"**❍ Wʜᴇɴ sᴏᴍᴇᴏɴᴇ ᴡɪᴛʜ ᴀ URL ɪɴ ᴛʜᴇɪʀ ʙɪᴏ ᴘᴏsᴛs, I’ʟʟ:**"
-"1. ⚠️ Wᴀʀɴ ᴛʜᴇᴍ"
-"2. 🔇 Mᴜᴛᴇ ɪғ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ʟɪᴍɪᴛ"
-"3. 🚫 Bᴀɴ ɪғ sᴇᴛ ᴛᴏ ʙᴀɴ"
+**❍ Wʜᴇɴ sᴏᴍᴇᴏɴᴇ ᴡɪᴛʜ ᴀ URL ɪɴ ᴛʜᴇɪʀ ʙɪᴏ ᴘᴏsᴛs, I’ʟʟ:**
+1. ⚠️ Wᴀʀɴ ᴛʜᴇᴍ
+2. 🔇 Mᴜᴛᴇ ɪғ ᴛʜᴇʏ ᴇxᴄᴇᴇᴅ ʟɪᴍɪᴛ
+3. 🚫 Bᴀɴ ɪғ sᴇᴛ ᴛᴏ ʙᴀɴ
 
-"**❍ Usᴇ ᴛʜᴇ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs ᴏɴ ᴡᴀʀɴɪɴɢs ᴛᴏ ᴄᴀɴᴄᴇʟ ᴏʀ ᴡʜɪᴛᴇʟɪsᴛ.**"
-    )
+**❍ Usᴇ ᴛʜᴇ ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴs ᴏɴ ᴡᴀʀɴɪɴɢs ᴛᴏ ᴄᴀɴᴄᴇʟ ᴏʀ ᴡʜɪᴛᴇʟɪsᴛ.**
+"""
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("🗑️ ˹cℓσsє˼", url="https://t.me/BioxCheakerbot?start=start")]
     ])
