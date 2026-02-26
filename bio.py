@@ -49,7 +49,7 @@ async def start_handler(client: Client, message):
     kb = InlineKeyboardMarkup([
         [InlineKeyboardButton("➕ ˹ᴀᴅᴅ ᴍє ɪη ʏσᴜʀ ɢʀσᴜᴘ˼", url=add_url)],
         [
-        InlineKeyboardButton("˹sᴜᴘᴘσʀᴛ˼", url="https://t.me/itsSmartDev"),
+        InlineKeyboardButton("˹sᴜᴘᴘσʀᴛ˼", url="https://t.me/ll_CarelessxCoder_ll"),
     ],
     [
         InlineKeyboardButton("˹❍ᴡηєʀ˼", url="tg://openmessage?user_id=8275132868"),
